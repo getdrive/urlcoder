@@ -28,4 +28,7 @@ Encoded URL (3 times): http://test_encode_url/someone%252520id%25253D1
 ex4: python3 urlcoder.py -e -f -u "http://test_encode_url/someone%20id%3D1"
 Encoded Full URL (1 times): http%3A//test_encode_url/someone%20id%3D1
 
+ex5: python3 urlcoder.py -e -n2 -u "test Test_T3st"
+Encoded URL (2 times): test%2520Test_T3st
+
 ```
