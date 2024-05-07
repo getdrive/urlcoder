@@ -20,7 +20,7 @@ ex: python3 urlcoder.py -e -u "http://test_encode_url/someone id=1"
 Encoded URL (1 times): http://test_encode_url/someone%20id%3D1
 
 ex2: python3 urlcoder.py -d -u "http://test_encode_url/someone%20id%3D1"
-Decoded URL (1 times): http://test_encode_url/someone id=1
+Decoded URL (1 times): http://test_decode_url/someone id=1
 
 ex3: python3 urlcoder.py -e -n3 -u "http://test_encode_url/someone%20id%3D1"
 Encoded URL (3 times): http://test_encode_url/someone%25252520id%2525253D1
