@@ -22,10 +22,10 @@ Encoded URL (1 times): http://test_encode_url/someone%20id%3D1
 ex2: python3 urlcoder.py -d -u "http://test_encode_url/someone%20id%3D1"
 Decoded URL (1 times): http://test_decode_url/someone id=1
 
-ex3: python3 urlcoder.py -e -n3 -u "http://test_encode_url/someone%20id%3D1"
-Encoded URL (3 times): http://test_encode_url/someone%25252520id%2525253D1
+ex3: python3 urlcoder.py -e -f -u "http://test_encode_url/someone id=1"
+Encoded URL (3 times): http://test_encode_url/someone%252520id%25253D1
 
 ex4: python3 urlcoder.py -e -f -u "http://test_encode_url/someone%20id%3D1"
-Encoded Full URL (1 times): http%3A//test_encode_url/someone%2520id%253D1
+Encoded Full URL (1 times): http%3A//test_encode_url/someone%20id%3D1
 
 ```
