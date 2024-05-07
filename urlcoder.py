@@ -17,9 +17,12 @@ if args.url:
             encoded_url = urllib.parse.quote(encoded_url)
         print(f'Encoded Full URL ({args.n} times): {encoded_url}')
     elif args.encode:
-        url_parts = args.url.split('://') 
-        base_url = url_parts[0] + '://' + url_parts[1].split('/')[0]
-        path = '/' + '/'.join(url_parts[1].split('/')[1:])
+        if args.url.startswith("http://") or args.url.startswith("https://"):
+            base_url = args.url.split('://')[0] + '://' + args.url.split('://')[1].split('/')[0]
+            path = '/' + '/'.join(args.url.split('://')[1].split('/')[1:])
+        else:
+            base_url = ""
+            path = args.url
         encoded_path = path
         for _ in range(args.n):
             encoded_path = urllib.parse.quote(encoded_path)
