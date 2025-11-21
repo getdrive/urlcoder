@@ -15,7 +15,7 @@ if args.url:
         encoded_url = args.url
         for _ in range(args.n):
             encoded_url = urllib.parse.quote(encoded_url)
-        print(f'Encoded Full URL ({args.n} times): {encoded_url}')
+        print(f'\nEncoded Full URL ({args.n} times): {encoded_url}')
     elif args.encode:
         if args.url.startswith("http://") or args.url.startswith("https://"):
             base_url = args.url.split('://')[0] + '://' + args.url.split('://')[1].split('/')[0]
@@ -27,13 +27,14 @@ if args.url:
         for _ in range(args.n):
             encoded_path = urllib.parse.quote(encoded_path)
         encoded_url = base_url + encoded_path
-        print(f'Encoded URL ({args.n} times): {encoded_url}')
+        print(f'\nEncoded URL ({args.n} times): {encoded_url}')
     elif args.decode:
         decoded_url = args.url
         for _ in range(args.n):
             decoded_url = urllib.parse.unquote(decoded_url)
-        print(f'Decoded URL ({args.n} times): {decoded_url}')
+        print(f'\nDecoded URL ({args.n} times): {decoded_url}')
     else:
         print('Please specify whether to encode (-e) or decode (-d) the URL.')
 else:
     print('Please provide a URL using -u or --url argument. For help using -h')
+
